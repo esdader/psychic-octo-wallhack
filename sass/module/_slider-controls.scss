@@ -1,0 +1,24 @@
+// ==========================================================================
+// Slider controls
+// ==========================================================================
+
+.slider-controls {
+	display: block;
+	position: absolute;
+	width: 37px;
+	height: 37px;
+	top: 50%;
+	margin-top: 37 / 2 * -1px;
+	
+	&.ctrl-right {
+		right: 29px;
+		background: url(../img/sp/ctrl-right.png) no-repeat center center;
+	}
+
+	&.ctrl-left {
+		left: 29px;
+		background: url(../img/sp/ctrl-left.png) no-repeat center center;
+	}
+
+}
+

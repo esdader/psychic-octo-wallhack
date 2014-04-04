@@ -1,0 +1,78 @@
+// ==========================================================================
+// Subpage pill
+// ==========================================================================
+
+.subpage-pill {
+	display: inline-block;
+	min-width: 129px;
+	padding: 11px 12px 12px;
+	margin: 0;
+	background: $color-med-gray;
+	
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+		    border-radius: 0 0 10px 10px;
+	
+	color: #fff;
+	
+	font-family: $font-family-body;
+	font-size: 14px;
+	line-height: 1;
+	
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	
+	// @extend %sub-header;
+
+	&.active,
+	&:hover {
+		background: $color-primal-green;
+	}
+
+
+}
+
+.in-banner .subpage-pill {
+	-webkit-transition: background-color 400ms ease;
+	   -moz-transition: background-color 400ms ease;
+	     -o-transition: background-color 400ms ease;
+	        transition: background-color 400ms ease;
+
+	&.active,
+	&:hover {
+		background: #fff;
+		color: $primal-green;
+	}
+}
+
+.in-banner.light-bg .subpage-pill {
+	color: #fff;
+
+	&.active,
+	&:hover {
+		background: $primal-green;
+		color: #fff;
+	}
+}
+
+.subpage-subnav .subpage-pill {
+	background: $color-dark-gray;
+	color: #fff;
+	
+	&.active,
+	&:hover {
+		// background: $primal-green;
+		background: #000;
+		color: #fff;
+	}
+}
+
+.homepage-roto-content .subpage-pill {
+	background: #fff;
+	color: #000;
+}
+
+.exercise-sub-nav {
+	padding: 16px 0 0;
+}

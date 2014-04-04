@@ -1,0 +1,58 @@
+// setup
+.installation-heading {
+	font-family: $font-family-body;
+	font-size: 18px;
+	font-size: 1.125rem;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.setup-step-container {
+	position: relative;
+}
+
+.setup-step-number {
+	position: absolute;
+	top: 26px;
+	left: -45px;
+	line-height: 1;
+	padding: .5em .75em;
+	text-align: center;
+	border-radius: 30px;
+	background: #000;
+	color: #fff;
+	@extend %sub-header-italic;
+}
+
+.no-title .setup-step-number {
+	top: 0;
+}
+
+
+.setup-step-title {
+	@extend %sub-header-italic;
+	margin-bottom: .25em;
+	font-size: 18px;
+	font-size: 18 / 16 * 1rem;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+.setup-step-container img {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+
+.setup-step-description {
+	margin: -1.5em 0 2.5em;
+	p,
+	li {
+		margin-bottom: .25em;
+		@extend %sub-header-italic;
+		color: rgb(35, 31, 32);
+		text-transform: uppercase;
+	}
+}

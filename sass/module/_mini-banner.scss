@@ -1,0 +1,44 @@
+// mini banner;
+
+.mini-banner {
+	margin-top: 1em;
+	padding: 30px 3.2%; 
+	background: $primal-green;
+
+	h1 {
+		@extend %sub-header;
+		margin: 8px 0 0;
+		font-size: 48px;
+		font-size: 48 / 16 * 1rem;
+		text-transform: uppercase;
+		line-height: 1em;
+
+		&:after {
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 1em;
+			line-height: 1em;
+			
+			content: url(../img/header_triangle.svg);
+		}
+	}
+
+	p {
+		margin-top: 1.5em;
+	}
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+.mini-banner.alt-background {
+	background: #fff;
+
+	padding-top: 0;
+	
+	h1 {
+		margin-top: 0;
+	}
+}
+
+

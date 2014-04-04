@@ -1,0 +1,82 @@
+// main nav
+$tmp-base: 14;
+$tmp-size: $tmp-base / 16 * 1em; // 14px
+$tmp-con-width: 830;
+
+.main-nav {
+	width: $tmp-con-width / $site-width * 100%;
+	margin: 0 auto;
+	padding-top: 58 / 16 * 1em;
+	li {
+		width: 100px;
+		text-align: center;
+	}
+
+
+	a {
+		font: normal normal normal 1em/ 1 $font-family-header-sub;
+		color: $color-main;
+		padding: 10 / $tmp-base * 1em;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		&:hover {
+			color: $primal-green;
+		}
+	}
+}
+
+/*
+ * you are here states
+ */
+
+// proudct
+.page-id-80,
+.page-id-17,
+.page-id-90,
+.page-id-86,
+.page-id-92,
+.page-id-84,
+.page-id-88,
+.page-id-82,
+.page-id-35,
+.page-id-37,
+.page-id-13,
+.page-id-11 {
+	.menu-item-60 a {
+		color: $primal-green;
+	}
+}
+
+// origins
+.page-id-25,
+.page-id-23,
+.page-id-21 {
+	.menu-item-67 a {
+		color: $primal-green;
+	}
+}
+
+// connect
+.page-id-31,
+.page-id-29 {
+	.menu-item-68 a {
+		color: $primal-green;
+	}
+}
+
+
+
+// spacing
+
+.menu-item-63 {
+	margin-right: 5%;
+}
+
+.menu-item-60 {
+	margin-right: 40%;
+}
+
+.menu-item-67 {
+	margin-right: 5%;
+}

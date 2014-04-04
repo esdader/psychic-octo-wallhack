@@ -1,0 +1,76 @@
+// banner
+.banner-heady {
+	margin: 0;
+	padding: 4em 5.5% 0;
+	font-size: 72 / 16 * 1em;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff;
+	@extend %header-thick;
+}
+
+.banner-description {
+	width: 45%;
+	padding: 0 0 0 5.7%;
+	font-size: .875em;
+	line-height: 1.5;
+	color: #fff;
+}
+
+.alt-color .banner-heady,
+.alt-color .banner-description {
+	color: #fff;
+}
+
+// product landing
+.page-id-11 .l-banner {
+	background: url(../img/banners/Banner_12_earlybird.jpg) no-repeat center top;
+}
+
+// bar and door setup
+.page-id-35,
+.page-id-37 {
+	.l-banner {
+		background: url(../img/banners/Banner_14_earlybird.jpg) no-repeat center top;		
+	}
+}
+
+// origins
+.page-id-21 .l-banner {
+	background: url(../img/banners/Banner_5_earlybird.jpg) no-repeat center top;
+}
+
+// behind primal
+.page-id-23 .l-banner {
+	background: url(../img/banners/Banner_2_earlybird.jpg) no-repeat center top;
+}
+
+// founders letter
+.page-id-25 .l-banner {
+	background: url(../img/banners/Banner_6_earlybird.jpg) no-repeat center top;
+}
+
+// background-attachment: 
+.page-id-29 .l-banner {
+	background: url(../img/banners/Banner_11_earlybird.jpg) no-repeat center top;
+}
+
+// faq
+.page-id-31 .l-banner {
+	background: url(../img/banners/Banner_8_earlybird.jpg) no-repeat center top;
+}
+
+// exercises
+.page-id-80,
+.page-id-17,
+.page-id-90,
+.page-id-86,
+.page-id-92,
+.page-id-84,
+.page-id-88,
+.page-id-82 {
+	.l-banner {
+		background: url(../img/banners/Banner_2_earlybird.jpg) no-repeat center top;
+	}
+}

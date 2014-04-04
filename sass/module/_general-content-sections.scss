@@ -1,0 +1,37 @@
+// general content sections
+
+// section content headings
+.section-content-title {
+	@extend %sub-header;
+	padding-top: .5em;
+	font-size: 20px;
+	font-size: 20 / 16 * 1rem;
+	text-transform: capitalize;
+	line-height: 1.2;
+}
+
+.section-content-sub-title {
+	@extend %sub-header-alt;
+	margin-bottom: .25em;
+	font-size: 16px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	line-height: 1.4;
+	letter-spacing: 1px;
+}
+
+
+// section intro
+.section-content-intro {
+	p,
+	li {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+// alternative background colors
+.panel-color-alt {
+	margin-top: 2em;
+	background-color: $primal-green;
+}

@@ -1,0 +1,50 @@
+// homepage video panel
+
+.homepage-video-container {
+	background: $color-nother-gray;
+}
+
+.primal-tagline {
+	@extend %sub-header-italic;
+	text-transform: uppercase;
+	font-size: .875em;
+}
+
+.video-heading {
+	@extend %sub-header-italic;
+	font-size: 2.5em;
+	padding-top: 2em;
+}
+
+.video-description {
+	width: 80%;
+	p {
+		font-size: .875em;
+		font-family: $font-family-body;
+	}	
+}
+
+.video-title {
+	@extend %sub-header-italic;
+	font-size: 1em;
+	text-transform: uppercase;
+	
+	a {
+		color: #000;
+
+		&:hover {
+			color: $primal-green;
+		}
+	}
+}
+
+/*
+ * video player
+ */
+
+ .videos-holder {
+ 	width: 640px;
+ 	height: 360px;
+ 	overflow: hidden;
+ 	background: #000;
+ }

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Font import
+   ========================================================================== */
+/**
+ * @license
+ * MyFonts Webfont Build ID 2774273, 2014-03-20T12:44:59-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Avenir Next Pro Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: Avenir Next Pro Italic by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-italic/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: Avenir Next Pro by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ITC Franklin Gothic Condensed Demi Italic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin-gothic/franklin-got-condensed-demi-italic/
+ * Copyright: Copyright 1995, 2002 Adobe Systems Incorporated. All Rights Reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: Franklin Gothic Heavy Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-heavy-italic/
+ * Copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2774273
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2a5501");
+
+  
+@font-face {font-family: 'AvenirNextLTPro-Bold';src: url('2A5501_0_0.eot');src: url('2A5501_0_0.eot?#iefix') format('embedded-opentype'),url('2A5501_0_0.woff') format('woff'),url('2A5501_0_0.ttf') format('truetype'),url('2A5501_0_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'AvenirNextLTPro-It';src: url('2A5501_1_0.eot');src: url('2A5501_1_0.eot?#iefix') format('embedded-opentype'),url('2A5501_1_0.woff') format('woff'),url('2A5501_1_0.ttf') format('truetype'),url('2A5501_1_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'AvenirNextLTPro-Regular';src: url('2A5501_2_0.eot');src: url('2A5501_2_0.eot?#iefix') format('embedded-opentype'),url('2A5501_2_0.woff') format('woff'),url('2A5501_2_0.ttf') format('truetype'),url('2A5501_2_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'FranklinGothic-DemiCndItal';src: url('2A5501_3_0.eot');src: url('2A5501_3_0.eot?#iefix') format('embedded-opentype'),url('2A5501_3_0.woff') format('woff'),url('2A5501_3_0.ttf') format('truetype'),url('2A5501_3_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'FranklinGothicURW-HeaIta';src: url('2A5501_4_0.eot');src: url('2A5501_4_0.eot?#iefix') format('embedded-opentype'),url('2A5501_4_0.woff') format('woff'),url('2A5501_4_0.ttf') format('truetype'),url('2A5501_4_0.svg#wf') format('svg');}
+ 
+
+/*
+	normalize and hb5p defaults
+	base styles
+	layouts
+	modules
+	utils
+	print defaults
+*/
+
+/* ==========================================================================
+   normalize and h5bp defaults
+   ========================================================================== */
+@import "utils/normalize";
+@import "utils/h5bp";
+
+/* ==========================================================================
+   base styles
+   ========================================================================== */
+
+@import "base/base";
+
+/* ==========================================================================
+   layouts
+   ========================================================================== */
+@import "layout/layout";
+@import "layout/main-logo";
+
+/* ==========================================================================
+   modules
+   ========================================================================== */
+/* old from splash page */
+
+// 3rd party
+@import "module/royal-slider";
+@import "module/royal-slider-min-white";
+
+// site modules
+@import "module/subpage-pill";
+@import "module/roto-sub-nav";
+@import "module/slider-controls";
+@import "module/homepage-intro";
+@import "module/homepage-roto-content";
+@import "module/quotes";
+@import "module/footer";
+
+@import "module/down-panel";
+
+/* end from splash page */
+
+@import "module/main-nav";
+@import "module/banner";
+@import "module/mini-banner";
+@import "module/panel-heading";
+@import "module/behind-primal";
+@import "module/general-content-sections";
+@import "module/faqs";
+@import "module/contact";
+@import "module/product-landing";
+@import "module/social-media-links";
+@import "module/footer-links";
+@import "module/setup";
+@import "module/homepage-videos";
+@import "module/features";
+@import "module/exercise";
+
+/* ==========================================================================
+   utils
+   ========================================================================== */
+@import "utils/h5bp_utils";
+
+/* ==========================================================================
+   print defaults
+   ========================================================================== */
+@import "utils/h5bp_print";

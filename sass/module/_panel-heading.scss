@@ -1,0 +1,88 @@
+// panel headings
+
+.panel-heading {
+	margin: 0;
+	font-size: 36 / 16 * 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	// line-height: 1.2;
+}
+
+.page-id-29 .panel-heading,
+.page-id-31 .panel-heading {
+	margin-top: 1em
+}
+
+.page-id-29 .panel-heading.panel-heading-alt {
+	margin-top: 0;
+}
+
+.full-left-col .panel-heading-holder {
+	margin-left: 36px;
+}
+
+.panel-heading-alt {
+	color: $color-header-alt;
+}
+
+
+.panel-heading-holder {
+	position: relative;
+	padding-left: 48px;
+	padding-right: 48px;
+	background-position: 0 10px;
+	background-repeat: no-repeat;
+}
+
+.arrow-pointer-alt {
+	position: absolute;
+	display: block;
+	width: 33px;
+	height: 33px;
+	top: 10px;
+	right: 20px;
+	background: url(../img/header-triangle-alt.svg) no-repeat left top;
+}
+
+.no-svg .arrow-pointer-alt {
+	background-image: url(../img/header-triangle-alt.png);
+}
+
+// The story
+.the-story-heading {
+	background-image: url(../img/icon_story.svg);
+
+	.panel-heading {
+		@extend .panel-heading-alt;
+	}
+}
+
+.no-svg .the-story-heading {
+	background-image: url(../img/icon_story.png);
+}
+
+// Behind Primal / 7 moves
+.behind-primal-heading {
+	background-image: url(../img/icon_behind_primal.svg);
+
+	.panel-heading {
+		@extend .panel-heading-alt;
+	}
+}
+
+.no-svg .behind-primal-heading{
+	background-image: url(../img/icon_behind_primal.png);	
+}
+
+// placeholder icon
+.attachments-heading {
+	background-image: url(../img/icon_behind_primal.svg);
+
+	.panel-heading {
+		@extend .panel-heading-alt;
+	}
+}
+
+.no-svg .attachments-heading {
+	background-image: url(../img/icon_behind_primal.png);	
+}

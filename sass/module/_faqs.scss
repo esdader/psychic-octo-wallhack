@@ -1,0 +1,26 @@
+// FAQs
+
+.faq-intro {
+	width: 70%;
+}
+
+.faq-sub-header {
+	@extend %sub-header;
+	font-size: 18px;
+	font-size: 18 / 16 * 1rem;
+	line-height: 1.2;
+	margin-bottom: .1em;
+	// text-transform: uppercase;
+	// letter-spacing: 1px;
+}
+
+.faq {
+	margin-bottom: 2.25em;
+}
+
+.faq-a {
+	@extend %sub-header;
+	font-size: 18px;
+	font-size: 18 / 16 * 1rem;
+	color: $primal-green;
+}

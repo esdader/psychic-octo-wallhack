@@ -1,0 +1,41 @@
+// ==========================================================================
+// Roto sub pill
+// ==========================================================================
+
+.roto-sub-pill {
+	display: block;
+	width: 127px;
+	padding: 8px 0;
+	margin: 0;
+	background: $color-med-gray;
+	
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+		    border-radius: 5px;
+	
+	color: #fff;
+	font-size: 11px;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	// @extend %sub-header;
+
+	&.active,
+	&:hover {
+		background: $color-primal-green;
+		color: #fff;
+	}
+}
+
+.quote-selector .roto-sub-pill {
+	width: 79px;
+}
+
+.video-pill {
+	width: auto;
+	padding: 8px 12px;
+	min-width: 79px;
+	margin-bottom: 10px;
+}

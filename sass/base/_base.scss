@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Site Variables
+   ========================================================================== */
+
+/**
+ * Dimensions
+ */
+
+ $site-width: 1024;
+ $int-panel-width: 970;
+
+/**
+ * colors
+ */
+
+$color-main: #000;
+$color-med-gray:     rgb(179, 179, 179);
+$color-dark-gray:    rgb(128, 128, 128);
+$color-nother-gray: rgb(230, 230, 230);
+$primal-green: rgb(50, 194, 47);
+$color-primal-green: $primal-green;
+
+$color-panel-border: $color-nother-gray;
+$color-header-alt: $color-med-gray;
+
+/**
+ * fonts 
+ */
+
+// body
+$font-family-body: AvenirNextLTPro-Regular, sans-serif;
+$font-family-body-bold: AvenirNextLTPro-Bold, sans-serif;
+$font-family-body-italic: 'AvenirNextLTPro-It', sans-serif;
+
+// headlines
+$font-family-header: FranklinGothicURW-HeaIta, sans-serif;
+$font-family-header-thin: FranklinGothic-DemiCndItal, sans-serif;
+$font-family-header-sub: AvenirNextLTPro-Bold, sans-serif;
+// $font-family-header-sub-alt: AvenirNextLTPro-UltLt, sans-serif;
+$font-family-header-sub-alt: $font-family-body-italic;
+$font-family-header-sub-italic: FranklinGothic-DemiCndItal, sans-serif;
+
+
+html, 
+body {
+	font-family: $font-family-body;
+	background: rgb(240, 240, 240);
+
+	strong,
+	b {
+		font-family: $font-family-body-bold;
+		font-weight: normal;
+	}
+
+	em,
+	i {
+		font-family: $font-family-body-italic;
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-header-thin;
+	font-weight: normal;
+}
+
+%header-thick {
+	font-family: $font-family-header;
+}
+
+%header-thin {
+	font-family: $font-family-header-thin;
+}
+
+%sub-header {
+	font-family: $font-family-header-sub;
+}
+
+%sub-header-alt {
+	font-family: $font-family-header-sub-alt;
+}
+
+%sub-header-italic {
+	font-family: $font-family-header-sub-italic;
+}
+
+a {
+	text-decoration: none;
+	color: $primal-green;
+
+	&:hover {
+		color: $color-med-gray;
+	}
+}
+
+.sep {
+	padding: 0 6px;
+}
+
+.l-container {
+	p,
+	li {
+		font-size: 14px;
+		font-size: .875rem;
+		line-height: 1.5;
+	}
+}
+
+
+
+/**
+ * Some defautls
+ */
+ 
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box; 
+}

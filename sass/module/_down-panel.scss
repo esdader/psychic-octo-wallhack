@@ -1,0 +1,74 @@
+// ==========================================================================
+// Down panel
+// ==========================================================================
+
+.down-panel {
+	display: block;
+	position: absolute;
+	top: 8px;
+	right: 30px;
+	width: 12px;
+	height: 14px;
+	background: url(../img/sp/down_panel.png) no-repeat center center;
+}
+
+.panel-down-btn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 24px;
+	height: 32px;
+	background: url(../img/down_arrow.svg) no-repeat 6px 12px;
+	cursor: pointer;
+
+	&:hover {
+		background-position: -18px 12px;
+	}
+}
+
+.no-svg .pnael-down-btn {
+	background-image: url(../img/down_arrow.png);
+}
+
+.l-content-panel-full-width .panel-down-btn {
+	right: 29px;
+}
+
+
+// ==========================================================================
+// Up panel
+// ==========================================================================
+
+.up-panel {
+	display: block;
+	position: absolute;
+	bottom: 8px;
+	right: 30px;
+	width: 12px;
+	height: 14px;
+	background: url(../img/sp/up_panel.png) no-repeat center center;
+}
+
+.panel-up-btn {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 24px;
+	height: 32px;
+	background: url(../img/up_arrow.svg) no-repeat 6px 6px;
+	cursor: pointer;
+
+	&:hover {
+		background-position: -18px 6px;
+	}
+}
+
+.no-svg .pnael-up-btn {
+	background-image: url(../img/up_arrow.png);
+}
+
+.l-content-panel-full-width .panel-up-btn {
+	right: 29px;
+}

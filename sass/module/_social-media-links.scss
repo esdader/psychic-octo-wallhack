@@ -1,0 +1,76 @@
+// social media links
+.social-media-links-title {
+	margin: 0 0 13px;
+	font-size: 14px;
+	font-size: 14 / 16 * 1rem;
+	font-family: $font-family-body-italic;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $color-med-gray;
+}
+
+.social-media-links {
+	li {
+		margin-right: 9px;
+	}
+	a {
+		display: block;
+		width: 28px;
+		height: 35px;
+		background-image: url(../img/social_media_link_icons.svg);
+		background-repeat: no-repeat;
+	}
+}
+
+.no-svg .social-media-links a {
+	background-image: url(../img/social_media_link_icons.png);
+	background-repeat: no-repeat;
+}
+
+.sml-twitter {
+	background-position: 0 top;
+
+	&:hover {
+		background-position: 0 bottom;
+	}
+}
+
+.sml-facebook {
+	background-position: -37px top;
+	
+	&:hover {
+		background-position: -37px bottom;
+	}
+}
+
+.sml-linkedin {
+	background-position: -74px top;
+	
+	&:hover {
+		background-position: -74px bottom;
+	}
+}
+
+.sml-pinterest {
+	background-position: -148px top;
+	
+	&:hover {
+		background-position: -148px bottom;
+	}
+}
+
+.sml-email {
+	background-position: -184px top;
+	
+	&:hover {
+		background-position: -184px bottom;
+	}
+}
+
+.sml-instagram {
+	background-position: -220px top;
+	
+	&:hover {
+		background-position: -220px bottom;
+	}
+}
