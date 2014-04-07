@@ -47,37 +47,38 @@
             </ul>
         </nav> 
   </header>
-
-    <div id="main" role="main">
-      {% comment %}}
-      We have a template file to render.
-      That's what content_for_layout is for.
-      {% endcomment %}
-      {{ content_for_layout }}
-    </div>
-
-    <footer>
-  
-      {% if linklists.footer.links.size > 0 %}
-      <p role="navigation">
-      {% for link in linklists.footer.links %}
-        <a href="{{ link.url }}" title="{{ link.title }}"{% if link.active %} class="active"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
-      </p>
-      {% endif %}
-      
-      <p role="contentinfo">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
-
-    </footer>
-
-    {% comment %}Shopify does not support Internet Explorer 6.{% endcomment %}
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-    
-  </div><!-- end of #container -->
-  
-  {{ 'shop.js'  | asset_url | script_tag }}
-
+  {{ content_for_layout }}
+<footer class="l-main-footer main-footer">
+    <section class="l-social-media-footer-links social-media-links clearfix">
+        <h1 class="social-media-links-title">Social</h1>
+        <ul class="l-hor-nav">
+            <li><a href="https://twitter.com/Primal7_System" target="_blank" class="sml-twitter ir">Follow Primal 7 on Twitter</a></li>
+            <li><a href="https://www.facebook.com/pages/Primal-7/603576436394949" target="_blank" class="sml-facebook ir">Follow Primal 7 on Facebook</a></li>
+            <li><a href="http://www.linkedin.com/company/primal-7?trk=top_nav_home" target="_blank" class="sml-linkedin ir">Follow Primal 7 on LinkedIn</a></li>
+            <li><a href="http://www.pinterest.com/Primal7/" target="_blank" class="sml-pinterest ir">Follow Primal 7 on Pinterest</a></li>
+            <li><a href="mailto:info@primal7.com" class="sml-email ir">Contact Primal 7</a></li>
+            <li><a href="http://instagram.com/primal_7" target="_blank" class="sml-instagram ir">Follow us on Instagram</a></li>
+        </ul>
+    </section>
+    <section class=l-footer-links>
+        <h1 class="social-media-links-title">Links</h1>
+        <nav class="footer-nav clearfix">
+            <ul class="">
+                <li id="menu-item-69" class="menu-item menu-item-69"><a href="{{ shop.url }}">Shop</a></li>
+                <li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-70"><a href="http://primal7.com/product/">Product</a></li>
+                <li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://primal7.com/origins/about-us/">Origins</a></li>
+                <li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://primal7.com/connect/contact/">Connect</a></li>
+                <li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://primal7.com/">Home</a></li>
+            </ul>
+        </nav> 
+    </section>
+    <section class="l-footer-copyright">
+        <p>{{ "now" | date: "%Y" }} &copy; of 12Novem Industries, LLC Austin, Texas</p>
+    </section>
+</footer>
+</div> <!-- ends l-container -->
+{{ 'jquery-1.11.0.min.js'  | asset_url | script_tag }}
+{{ 'plugins.js'  | asset_url | script_tag }}
+{{ 'main.js'  | asset_url | script_tag }}
 </body>
 </html>

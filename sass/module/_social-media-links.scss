@@ -17,13 +17,13 @@
 		display: block;
 		width: 28px;
 		height: 35px;
-		background-image: url(../img/social_media_link_icons.svg);
+		background-image: siu("social_media_link_icons.svg");
 		background-repeat: no-repeat;
 	}
 }
 
 .no-svg .social-media-links a {
-	background-image: url(../img/social_media_link_icons.png);
+	background-image: siu("social_media_link_icons.png");
 	background-repeat: no-repeat;
 }
 
