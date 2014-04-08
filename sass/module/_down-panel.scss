@@ -19,7 +19,7 @@
 	right: 0;
 	width: 24px;
 	height: 32px;
-	background: url(../img/down_arrow.svg) no-repeat 6px 12px;
+	background: siu("down_arrow.svg") no-repeat 6px 12px;
 	cursor: pointer;
 
 	&:hover {
@@ -28,7 +28,7 @@
 }
 
 .no-svg .pnael-down-btn {
-	background-image: url(../img/down_arrow.png);
+	background-image: siu("down_arrow.png");
 }
 
 .l-content-panel-full-width .panel-down-btn {
@@ -57,7 +57,7 @@
 	right: 0;
 	width: 24px;
 	height: 32px;
-	background: url(../img/up_arrow.svg) no-repeat 6px 6px;
+	background: siu("up_arrow.svg") no-repeat 6px 6px;
 	cursor: pointer;
 
 	&:hover {
@@ -66,7 +66,7 @@
 }
 
 .no-svg .pnael-up-btn {
-	background-image: url(../img/up_arrow.png);
+	background-image: siu("up_arrow.png");
 }
 
 .l-content-panel-full-width .panel-up-btn {

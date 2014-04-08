@@ -985,6 +985,16 @@ a:hover {
   padding: 40px 0 0;
 }
 
+.l-product-panel-full-width {
+  width: auto;
+  margin: 0 3.11203%;
+  padding-left: 0;
+}
+
+.l-product-details-col {
+  padding-right: 0;
+}
+
 .l-main-logo {
   position: absolute;
   left: 50%;
@@ -1111,7 +1121,7 @@ a:hover {
   right: 0;
   width: 24px;
   height: 32px;
-  background: url(../img/down_arrow.svg) no-repeat 6px 12px;
+  background: url({{'down_arrow.svg' | asset_url}}) no-repeat 6px 12px;
   cursor: pointer;
 }
 .panel-down-btn:hover {
@@ -1119,7 +1129,7 @@ a:hover {
 }
 
 .no-svg .pnael-down-btn {
-  background-image: url(../img/down_arrow.png);
+  background-image: url({{'down_arrow.png' | asset_url}});
 }
 
 .l-content-panel-full-width .panel-down-btn {
@@ -1143,7 +1153,7 @@ a:hover {
   right: 0;
   width: 24px;
   height: 32px;
-  background: url(../img/up_arrow.svg) no-repeat 6px 6px;
+  background: url({{'up_arrow.svg' | asset_url}}) no-repeat 6px 6px;
   cursor: pointer;
 }
 .panel-up-btn:hover {
@@ -1151,7 +1161,7 @@ a:hover {
 }
 
 .no-svg .pnael-up-btn {
-  background-image: url(../img/up_arrow.png);
+  background-image: url({{'up_arrow.png' | asset_url}});
 }
 
 .l-content-panel-full-width .panel-up-btn {
@@ -1241,6 +1251,10 @@ a:hover {
 .alt-color .banner-heady,
 .alt-color .banner-description {
   color: #fff;
+}
+
+.l-banner {
+  background: url({{'Banner_2_earlybird.jpg' | asset_url}}) no-repeat center top;
 }
 
 .mini-banner {
