@@ -12,34 +12,34 @@
     </nav>
 </div>
 <article class="l-content-panel l-product-panel-full-width" itemscope itemtype="http://schema.org/Product">
-    <div class="l-content-panel-col-left">
+    <div class="l-content-panel-col-left l-product-images-col">
         <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
       <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
         <div class="l-product-main-image-con">
             <img src="{{ product.featured_image.src | product_img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" class="product-main-image">
         </div>
         {% if product.images.size > 1 %}
-            <div class="l-product-images-thmb-con">
+            <div class="l-product-images-thmb-con clearfix">
                 <ul class="product-images-thmb">
                     {% for image in product.images offset: 1 %}
-                        <li>
+                        <li{% cycle '', '', ' class="last"' %}>
                             <a class="product-image-link" href="{{ image.src | product_img_url: 'grande' }}">
-                              <img src="{{ image.src | product_img_url: 'compact' }}" alt="{{ image.alt | escape }}" />
+                              <img class="product-thmb" src="{{ image.src | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
                             </a>
                         </li>
                     {% endfor %}
-                        <li>
-                            <a class="product-image-link" href="{{ product.featured_image.src | product_img_url: 'grande' }}">
-                              <img src="{{ product.featured_image.src | product_img_url: 'compact' }}" alt="{{ product.featured_image.alt | escape }}" />
-                            </a>
-                        </li>
+                    <li class="last">
+                        <a class="product-image-link" href="{{ product.featured_image.src | product_img_url: 'grande' }}">
+                          <img class="product-thmb" src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+                        </a>
+                    </li>
                 </ul>
             </div>
         {% endif %}
     </div>
     <div class="l-content-panel-col-right l-product-details-col">
         <form action="/cart/add" method="post" enctype="multipart/form-data">
-            <div class="product-details-title-price">
+            <div class="product-details-title-price clearfix">
                 <h1 class="product-details-title" itemprop="name">{{ product.title }}</h1>
                 <div class="product-details-price-con" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
