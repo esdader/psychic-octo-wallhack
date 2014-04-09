@@ -1,4 +1,16 @@
-<h1>Shopping Cart</h1>
+<div class="l-banner">
+    <h1 class="banner-heady">Shop</h1>
+    <nav class="main-subpage-nav in-banner clearfix">
+        <ul class="l-horizontal-nav clearfix">
+            <li>
+                <a href="{{ shop.url }}" class="subpage-pill">Shop</a>
+            </li>
+            <li>
+                <a href="/cart" class="subpage-pill">Cart</a>
+            </li>
+        </ul>
+    </nav>
+</div>
   
 {% if cart.item_count > 0 %}
 

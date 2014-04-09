@@ -1,27 +1,27 @@
-{% comment %}
-Re-use the 'rte' class wherever you output content that was added by a merchant using
-the Rich Text Editor ( 'rte' stands for rich text editor ).
-Style all HTML elements in that content the same way across the board.
-Use the 'rte' class in your CSS to help maintain that consistency.
-Example: the h2 element should have the same size and color in:
-- product descriptions
-- collection descriptions
-- 'page' pages' content
-- blog post
-{% endcomment %}
-
-{% assign page = pages.frontpage %}
-
-<div class="rte">
-  {{ page.content }}
+<div class="l-banner">
+    <h1 class="banner-heady">Shop</h1>
+    <nav class="main-subpage-nav in-banner clearfix">
+        <ul class="l-horizontal-nav clearfix">
+            <li>
+                <a href="{{ shop.url }}" class="subpage-pill">Shop</a>
+            </li>
+            <li>
+                <a href="/cart" class="subpage-pill">Cart</a>
+            </li>
+        </ul>
+    </nav>
 </div>
-
-{% assign collection = collections.frontpage %}
-
-<ul class="grid clearfix">
-{% for product in collection.products %}
-  {% include 'product-grid-item' with 'three-per-row' %}
-{% else %}
-<li>You have no products in your Frontpage collection. <a href="http://www.shopify.com/admin/custom_collections">Add some.</a></li>
-{% endfor %}
-</ul>
+<article class="l-content-panel">
+    <div class="l-content-panel-col-left">
+        
+    </div>
+    <div class="l-content-panel-col-right">
+        {{ pages.frontpage.content }}
+    </div>
+    <div class="panel-down-btn">
+        
+    </div>
+    <div class="panel-up-btn">
+        
+    </div>
+</article>
