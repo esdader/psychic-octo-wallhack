@@ -682,7 +682,12 @@ h6 {
   font-family: FranklinGothicURW-HeaIta, sans-serif;
 }
 
-.mini-banner h1, .section-content-title {
+.mini-banner h1, .section-content-title, .product-details-desc h1,
+.product-details-desc h2,
+.product-details-desc h3,
+.product-details-desc h4,
+.product-details-desc h5,
+.product-details-desc h6 {
   font-family: AvenirNextLTPro-Bold, sans-serif;
 }
 
@@ -1278,7 +1283,7 @@ a:hover {
   vertical-align: top;
   padding-left: 1em;
   line-height: 1em;
-  content: url(../img/header_triangle.svg);
+  content: url({{'header_triangle.svg' | asset_url}});
 }
 .mini-banner p {
   margin-top: 1.5em;
@@ -1443,6 +1448,7 @@ a:hover {
 .product-details-price-con {
   float: right;
   width: 30%;
+  text-align: right;
 }
 
 .product-details-compare-price,
@@ -1453,6 +1459,179 @@ a:hover {
   color: #ccc;
   font-family: FranklinGothic-DemiCndItal, sans-serif;
   text-align: right;
+}
+
+.product-details-add-to-con {
+  padding: 1em;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.add-to-cart {
+  width: 130px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #32c22f;
+  font: normal normal normal 11px/1 FranklinGothic-DemiCndItal, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.add-to-cart:hover {
+  background: #b3b3b3;
+}
+
+.view-cart-btn {
+  display: block;
+  width: 80px;
+  float: right;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #b3b3b3;
+  font: normal normal normal 11px/1 FranklinGothic-DemiCndItal, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.view-cart-btn:hover {
+  background: #32c22f;
+  color: #fff;
+}
+
+.product-details-desc {
+  padding: 1.5em 3% 2em 0;
+}
+.product-details-desc h1,
+.product-details-desc h2,
+.product-details-desc h3,
+.product-details-desc h4,
+.product-details-desc h5,
+.product-details-desc h6 {
+  margin: 0 0 .75em;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cart-sub-panel {
+  padding: 1.4375em 4.3299% 0;
+  margin-bottom: 1.25em;
+  background: #f0f1f1;
+}
+
+.cart-table {
+  width: 100%;
+}
+.cart-table thead {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.cart-table th {
+  font-family: FranklinGothic-DemiCndItal, sans-serif;
+  font-size: 12px;
+  line-height: 3;
+  text-align: left;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cart-table tbody td {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.cart-table tbody tr {
+  border-bottom: 1px solid #fff;
+}
+
+.product-col {
+  width: 29.46429%;
+}
+
+.product-col-th {
+  padding-left: 18px;
+}
+
+.title-col {
+  width: 31.91964%;
+}
+
+.title-col-td p {
+  margin: 0;
+}
+
+.quantity-col {
+  width: 18.52679%;
+}
+
+.quantity-col-td {
+  padding-left: 10px;
+}
+
+.cart-quantity {
+  width: 42px;
+  font: normal normal normal 14px/1.5 AvenirNextLTPro-Regular, sans-serif;
+}
+
+.update-col {
+  width: 19.75446%;
+}
+
+.update-col-td {
+  text-align: right;
+}
+
+.cart-table .update-col-th {
+  padding-right: 14px;
+  text-align: right;
+}
+
+.cart-update-title {
+  margin: 0;
+}
+
+.update-cart-btn {
+  display: block;
+  width: 80px;
+  float: right;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #b3b3b3;
+  font: normal normal normal 11px/1 FranklinGothic-DemiCndItal, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.update-cart-btn:hover {
+  background: #32c22f;
+  color: #fff;
+}
+
+.l-container .cart-total {
+  margin: 0;
+  font: normal normal normal 36px/1 FranklinGothic-DemiCndItal, sans-serif;
+  color: #ccc;
+}
+
+.checkout-row {
+  border-bottom: none;
+}
+
+.checkout-btn {
+  display: block;
+  width: 80px;
+  float: right;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #32c22f;
+  font: normal normal normal 11px/1 FranklinGothic-DemiCndItal, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.checkout-btn:hover {
+  background: #b3b3b3;
+  color: #fff;
 }
 
 .social-media-links-title {

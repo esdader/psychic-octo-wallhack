@@ -3,7 +3,7 @@
     <nav class="main-subpage-nav in-banner clearfix">
         <ul class="l-horizontal-nav clearfix">
             <li>
-                <a href="{{ shop.url }}" class="subpage-pill">Shop</a>
+                <a href="{{ shop.url }}" class="subpage-pill active">Shop</a>
             </li>
             <li>
                 <a href="/cart" class="subpage-pill">Cart</a>
@@ -71,12 +71,18 @@
             </div>
             <div class="product-details-add-to-con">
                 <div id="product-add">
-                    <input type="submit" name="add" id="add" value="Add to cart">
+                    <input type="submit" name="add" id="add" class="add-to-cart" value="Add to cart">
+                    <a href="/cart" class="view-cart-btn">View Cart</a>
                 </div>
             </div>
         </form>
         <div class="product-details-desc" itemprop="description">
             {{ product.description }}
+            <h2>Timeframe</h2>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+
+            <h2>Shipping Notes:</h2>
+            <p>Dadipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.tempor cum soluta nobis.</p>
         </div>
     </div>
     <div class="panel-down-btn">
