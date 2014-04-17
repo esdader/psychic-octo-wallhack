@@ -1,0 +1,361 @@
+@import url("//hello.myfonts.net/count/2a5501");
+/* ==========================================================================
+   Font import
+   ========================================================================== */
+/**
+ * @license
+ * MyFonts Webfont Build ID 2774273, 2014-03-20T12:44:59-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Avenir Next Pro Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: Avenir Next Pro Italic by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-italic/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 500,000
+ * 
+ * Webfont: Avenir Next Pro by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+ * Copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ITC Franklin Gothic Condensed Demi Italic by ITC
+ * URL: http://www.myfonts.com/fonts/itc/franklin-gothic/franklin-got-condensed-demi-italic/
+ * Copyright: Copyright 1995, 2002 Adobe Systems Incorporated. All Rights Reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: Franklin Gothic Heavy Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-heavy-italic/
+ * Copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2774273
+ * 
+ * © 2014 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'AvenirNextLTPro-Bold';
+  src: url("2A5501_0_0.eot");
+  src: url("2A5501_0_0.eot?#iefix") format("embedded-opentype"), url("2A5501_0_0.woff") format("woff"), url("2A5501_0_0.ttf") format("truetype"), url("2A5501_0_0.svg#wf") format("svg");
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-It';
+  src: url("2A5501_1_0.eot");
+  src: url("2A5501_1_0.eot?#iefix") format("embedded-opentype"), url("2A5501_1_0.woff") format("woff"), url("2A5501_1_0.ttf") format("truetype"), url("2A5501_1_0.svg#wf") format("svg");
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url("2A5501_2_0.eot");
+  src: url("2A5501_2_0.eot?#iefix") format("embedded-opentype"), url("2A5501_2_0.woff") format("woff"), url("2A5501_2_0.ttf") format("truetype"), url("2A5501_2_0.svg#wf") format("svg");
+}
+
+@font-face {
+  font-family: 'FranklinGothic-DemiCndItal';
+  src: url("2A5501_3_0.eot");
+  src: url("2A5501_3_0.eot?#iefix") format("embedded-opentype"), url("2A5501_3_0.woff") format("woff"), url("2A5501_3_0.ttf") format("truetype"), url("2A5501_3_0.svg#wf") format("svg");
+}
+
+@font-face {
+  font-family: 'FranklinGothicURW-HeaIta';
+  src: url("2A5501_4_0.eot");
+  src: url("2A5501_4_0.eot?#iefix") format("embedded-opentype"), url("2A5501_4_0.woff") format("woff"), url("2A5501_4_0.ttf") format("truetype"), url("2A5501_4_0.svg#wf") format("svg");
+}
+
+/* Undo overview background and borders */
+#main #overview {
+  background: #fff;
+  border: none;
+}
+#main #overview > * {
+  border: none;
+}
+#main #thumbs div {
+  border: none;
+}
+
+/* Insert your own logo (upload separately) */
+#logo { 
+  height: 65px;
+  background: url({{ 'primal7_lrg_logo.png' | asset_url | replace: 'http://','https://' }}) center no-repeat;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal !important;
+  letter-spacing: 3px;
+}
+label {
+  font-weight: normal !important;
+  letter-spacing: 3px;
+}
+#header > h1{
+  text-align:center;
+}
+
+/* Hide the name of the store because we got this nifty logo now */
+
+#header > h1 span.title {
+  display:none;
+}
+#tagline {
+  display: none;
+}
+
+#container,
+#container.slim,
+#main,
+#container.slim #main,
+#header,
+#container.slim #header,
+#footer,
+#container.slim #footer{width:944px;background:#fff;padding:0}
+
+#main #overview {
+  border-top: 1px solid #464646;
+  border-bottom: 1px solid #464646;
+  padding: 10px 0;
+}
+
+#products > h2 {
+  display: none;
+}
+
+#products td {
+  font-family: '', serif;
+  font-size: 10px;
+  color: #464646;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+#products td div {
+  margin-right: 10px;
+}
+
+#products .plist-line-price,
+#products .plisthead {
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 2;
+  color: #464646;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+#products .plisthead {
+  padding-top: 10px;
+}
+
+#wallet {
+  width: 280px;
+  float: right;
+  margin: 0;
+}
+#cost {
+  display: block;
+  width: 280px;
+  height: 47px;
+  font-size: 11px;
+  line-height: 47px;
+  color: #fff;
+  background: #464646;
+  font-family: 'CenturyStd-Book', serif;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+#cost, #order-num {
+  text-shadow: none !important;
+}
+#overview .hint,
+#shipping_span,
+#steps {
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #939598;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+#cost #steps {
+  line-height: 15px;
+}
+
+#content {
+  padding: 0;
+}
+
+#email {
+  padding: 20px 0;
+  border-bottom: 1px solid #464646;
+  background: none !important;
+  border: none;
+}
+
+#email label {
+  margin-bottom: 10px;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #464646;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+#content .group {
+  background: none !important;
+  border: none;
+}
+
+#content .group h3 {
+  padding: 20px 0 10px;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #464646;
+  text-align: left;
+  border-bottom: none;
+  border-top: 1px solid #464646;
+}
+
+#addresses {
+  padding: 0;
+}
+
+#addresses label {
+  padding: 20px 0 10px;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #464646;
+  text-align: left;
+}
+
+#addresses td {
+  width: 303px;
+  padding-right: 0;
+}
+
+#addresses .lbl {
+  width: 160px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#addresses input {
+  border-color: #464646;
+  width: 298px;
+}
+
+.address-notification {
+  background: none;
+  border-color: #464646;
+  text-transform: uppercase;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+#buttons {
+  background: none;
+  border-top: 1px solid #464646;
+  border-bottom: none;
+  padding: 20px 0 30px 0;
+}
+#complete-purchase,
+#commit-button {
+  width: 200px;
+  height: 34px;
+  border: 1px solid #464646;
+  background: #464646;
+  text-transform: uppercase;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: normal !important;
+  cursor: pointer;
+}
+
+#cancel-purchase {
+  text-transform: uppercase;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: #464646;
+  text-decoration: none;
+}
+
+#payment .group {
+  padding: 0;
+}
+
+#payment .group h3 {
+  border-top: none;
+  padding: 0;
+}
+
+#main p {
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+#payment-method .group {
+  padding: 0;
+}
+
+#payment-method .group h3 {
+  padding-bottom: 0;
+}
+
+#payment-method table {
+  width: 100%;
+}
+#payment-method label {
+  text-transform: uppercase;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+#payment-method table input {
+  border-color: #464646;
+  width: 100%;
+}
+
+#payment-method #credit_card_first_name {
+  width: 95%;
+}
+
+#payment-method .hint {
+  text-transform: uppercase;
+  font-family: 'CenturyStd-Book', serif;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+#marketing-box {
+  padding: 0;
+}
