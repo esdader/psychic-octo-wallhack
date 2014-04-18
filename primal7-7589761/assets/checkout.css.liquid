@@ -73,6 +73,10 @@
   src: url("2A5501_4_0.eot?#iefix") format("embedded-opentype"), url("2A5501_4_0.woff") format("woff"), url("2A5501_4_0.ttf") format("truetype"), url("2A5501_4_0.svg#wf") format("svg");
 }
 
+body {
+  padding: 0;
+}
+
 /* Undo overview background and borders */
 #main #overview {
   background: #fff;
@@ -87,7 +91,7 @@
 
 /* Insert your own logo (upload separately) */
 #logo { 
-  height: 65px;
+  height: 80px;
   background: url({{ 'primal7_lrg_logo.png' | asset_url | replace: 'http://','https://' }}) center no-repeat;
 }
 h1,
@@ -97,14 +101,20 @@ h4,
 h5,
 h6 {
   font-weight: normal !important;
-  letter-spacing: 3px;
 }
 label {
   font-weight: normal !important;
-  letter-spacing: 3px;
+}
+
+input {
+  font-size: 14px;
 }
 #header > h1{
   text-align:center;
+}
+
+a {
+  color: #32c22f;
 }
 
 /* Hide the name of the store because we got this nifty logo now */
@@ -125,9 +135,18 @@ label {
 #footer,
 #container.slim #footer{width:944px;background:#fff;padding:0}
 
+#container {
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+#header {
+  padding: 20px 0;
+}
+
 #main #overview {
-  border-top: 1px solid #464646;
-  border-bottom: 1px solid #464646;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
   padding: 10px 0;
 }
 
@@ -136,9 +155,9 @@ label {
 }
 
 #products td {
-  font-family: '', serif;
-  font-size: 10px;
-  color: #464646;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
+  color: #222;
   vertical-align: middle;
   padding: 10px 0;
 }
@@ -148,11 +167,10 @@ label {
 
 #products .plist-line-price,
 #products .plisthead {
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 2;
-  color: #464646;
-  letter-spacing: 3px;
+  color: #222;
   font-weight: normal;
 }
 
@@ -167,29 +185,33 @@ label {
 }
 #cost {
   display: block;
-  width: 280px;
-  height: 47px;
-  font-size: 11px;
-  line-height: 47px;
-  color: #fff;
-  background: #464646;
-  font-family: 'CenturyStd-Book', serif;
-  font-weight: normal;
-  letter-spacing: 3px;
+  float: right;
+  padding: 20px 92px;
+  border: none;
+  border-radius: 3px;
+  background: #32C22F;
+  font: normal normal normal 11px/1 FranklinGothic-DemiCndItal, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFF;
 }
+
 #cost, #order-num {
   text-shadow: none !important;
 }
 #overview .hint,
 #shipping_span,
 #steps {
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 1.5;
   color: #939598;
   margin: 0;
   padding: 0;
   font-style: normal;
+  clear: both;
+  display: inline-block;
 }
 
 #cost #steps {
@@ -202,18 +224,17 @@ label {
 
 #email {
   padding: 20px 0;
-  border-bottom: 1px solid #464646;
+  border-bottom: 1px solid #222;
   background: none !important;
   border: none;
 }
 
 #email label {
   margin-bottom: 10px;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'FranklinGothic-DemiCndItal', sans-serif;
+  font-size: 20px;
   line-height: 1.5;
-  color: #464646;
-  text-transform: uppercase;
+  color: #222;
   letter-spacing: 3px;
   font-weight: normal;
 }
@@ -225,14 +246,13 @@ label {
 
 #content .group h3 {
   padding: 20px 0 10px;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'FranklinGothic-DemiCndItal', sans-serif;
+  font-size: 20px;
   line-height: 1.6;
-  text-transform: uppercase;
-  color: #464646;
+  color: #222;
   text-align: left;
   border-bottom: none;
-  border-top: 1px solid #464646;
+  border-top: 1px solid #222;
 }
 
 #addresses {
@@ -241,11 +261,10 @@ label {
 
 #addresses label {
   padding: 20px 0 10px;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 1.6;
-  text-transform: uppercase;
-  color: #464646;
+  color: #222;
   text-align: left;
 }
 
@@ -261,48 +280,54 @@ label {
 }
 
 #addresses input {
-  border-color: #464646;
+  border-color: #222;
   width: 298px;
 }
 
 .address-notification {
   background: none;
-  border-color: #464646;
-  text-transform: uppercase;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  border-color: #222;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
 #buttons {
   background: none;
-  border-top: 1px solid #464646;
+  border-top: 1px solid #222;
   border-bottom: none;
   padding: 20px 0 30px 0;
 }
 #complete-purchase,
 #commit-button {
-  width: 200px;
-  height: 34px;
-  border: 1px solid #464646;
-  background: #464646;
+  width: 220px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #32c22f;
+  font: normal normal normal 14px/1 FranklinGothic-DemiCndItal, sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
-  line-height: 34px;
-  letter-spacing: 1px;
   color: #fff;
   font-weight: normal !important;
   cursor: pointer;
 }
 
+#complete-purchase:hover,
+#commit-button:hover  {
+  background: #b3b3b3;
+}
+
+#buttons input {
+  padding: 16px 12px;
+}
+
 #cancel-purchase {
-  text-transform: uppercase;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 34px;
   letter-spacing: 1px;
-  color: #464646;
+  color: #222;
   text-decoration: none;
 }
 
@@ -316,8 +341,8 @@ label {
 }
 
 #main p {
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 1.4;
   letter-spacing: 1px;
 }
@@ -334,14 +359,13 @@ label {
   width: 100%;
 }
 #payment-method label {
-  text-transform: uppercase;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 1.6;
 }
 
 #payment-method table input {
-  border-color: #464646;
+  border-color: #222;
   width: 100%;
 }
 
@@ -350,12 +374,16 @@ label {
 }
 
 #payment-method .hint {
-  text-transform: uppercase;
-  font-family: 'CenturyStd-Book', serif;
-  font-size: 10px;
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-size: 14px;
   line-height: 1.6;
 }
 
 #marketing-box {
   padding: 0;
+}
+
+
+.form td {
+  padding-top: 0;
 }

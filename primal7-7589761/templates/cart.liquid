@@ -84,9 +84,10 @@
                 <td class="update-col update-col-td">
                   <input class="checkout-btn" type="submit" name="checkout" value="Checkout" />
                   {% if additional_checkout_buttons %}
-                  <p class="additional-checkout-buttons">
+                  <div class="additional-checkout-buttons">
+                    <p>or pay with</p>
                     {{ content_for_additional_checkout_buttons }}
-                  </p>
+                  </div>
                   {% endif %}  
                 </td>
               </tr>
