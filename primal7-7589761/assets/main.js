@@ -1,11 +1,15 @@
 /* global svgeezy:false */
 
-(function($, window){
-    
+(function ($, window) {
+
     var $downArrows        = $('.panel-down-btn'),
         $upArrows          = $('.panel-up-btn'),
         $productImageLinks = $('.product-image-link'),
-        $mainProductImage  = $('.l-product-main-image-con').find('img');
+        $mainProductImage  = $('.l-product-main-image-con').find('img'),
+        $productSelect     = $('#product-select'),
+        $productPrice      = $('.product-details-price'),
+        fancyOptions,
+        fancyOptionsItems;
 
     // replace svg with png fallbacks
     svgeezy.init(false, 'png');
@@ -65,6 +69,26 @@
 
     });
 
-    $('#product-select').fancySelect();
+    // change product drop down to fancyselect
+    $productSelect.fancySelect();
+
+    fancyOptions      = $('.fancy-select').find('.options');
+    fancyOptionsItems = fancyOptions.find('li');
+
+
+
+    // update display price when item is changed in fancyselect
+    fancyOptionsItems.on('click', function () {
+        var $this = $(this),
+            id = $this.data('raw-value'),
+            optionItem,
+            price;
+
+        optionItem = $productSelect.find('option[value="' + id + '"]');
+        price = optionItem.data('price');
+
+        $productPrice.text(price);
+
+    });
 
 })(jQuery, window);

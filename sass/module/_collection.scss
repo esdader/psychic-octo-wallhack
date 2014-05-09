@@ -1,0 +1,70 @@
+// collections
+
+.rte {
+	font-size: 14px;
+	font-size: .875rem;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+}
+
+.collection-featured-image {
+	padding-bottom: 1em;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.collection-product-description:before {
+	position: absolute;
+	top: 11px;
+	left: -27px;
+	width: 0; 
+	height: 0; 
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 17px solid rgb(179, 179, 179);
+	content: " ";
+}
+
+.collection-product-more-info {
+	padding: 1em 1em 1em 0;
+	margin-bottom: 2em;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.collection-product-price {
+	margin: 0;
+	float: left;
+	color: #ccc;
+	font-size: 36px;
+	line-height: 1;
+
+	span {
+		vertical-align: middle;
+		font-size: 16px;
+		color: #000;
+		text-transform: uppercase;
+	}
+}
+
+.view-item-btn {
+	display: block;
+	float: right;
+	padding: 8px 18px;
+	margin-top: 4px;
+	border: none;
+	border-radius: 3px;
+	background: $primal-green;
+	font: normal normal normal 12px/1 FranklinGothic-DemiCndItal, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+	
+	&:hover {
+		background: #b3b3b3;
+		color: #fff;
+	}
+}

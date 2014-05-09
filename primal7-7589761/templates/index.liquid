@@ -1,3 +1,4 @@
+{% paginate collections by 50 %}
 <div class="l-banner">
     <h1 class="banner-heady">Shop</h1>
     <nav class="main-subpage-nav in-banner clearfix">
@@ -11,17 +12,37 @@
         </ul>
     </nav>
 </div>
-<article class="l-content-panel">
-    <div class="l-content-panel-col-left">
-        
-    </div>
-    <div class="l-content-panel-col-right">
-        {{ pages.frontpage.content }}
-    </div>
-    <div class="panel-down-btn">
-        
-    </div>
-    <div class="panel-up-btn">
-        
-    </div>
-</article>
+{% for collection in collections %}
+    <article class="l-content-panel first">
+        <div class="l-content-panel-col-left">
+            <h1 class="panel-heading panel-heading-alt">
+                {{ collection.title }}
+            </h1>
+        </div>
+        <div class="l-content-panel-col-right">
+            <h1 class="section-content-heading collection-product-description">
+                Collection Description
+            </h1>
+            <section class="product-section-overview">
+                <div class="rte">
+                    {{ collection.description }}    
+                </div>
+                <div class="collection-product-more-info clearfix">
+                    <a href="{{ collection.url }}" class="view-item-btn pull-left">View Collection</a>
+                </div>
+                <div class="collection-featured-image">
+                    {% if collection.image %}
+                        <img src="{{ collection.image.src | collection_img_url: 'grande' }}" alt="{{ collection.img.alt | escape }}" />
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+        <div class="panel-down-btn">
+            
+        </div>
+        <div class="panel-up-btn">
+            
+        </div>
+    </article>
+{% endfor %}
+{% endpaginate %}

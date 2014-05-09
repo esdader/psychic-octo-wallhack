@@ -1,83 +1,72 @@
-{% comment %}
-Important notes about pagination:
-- Never access collection.products before the opening paginate tag.
-- Never paginate by more than 50.
-{% endcomment %}
-
-{% paginate collection.products by 6 %}
-
-{% comment %}
-Re-use the 'rte' class wherever you output content that was added by a merchant using
-the Rich Text Editor ( 'rte' stands for rich text editor ).
-Style all HTML elements in that content the same way across the board.
-Use the 'rte' class in your CSS to help maintain that consistency.
-Example: the h2 element should have the same size and color in:
-- product descriptions
-- collection descriptions
-- 'page' pages' content
-- blog post
-{% endcomment %}
-
-<h1>{{ collection.title }}</h1>
-
-{% comment %}
-Listing all tags within the current collection.
-Shopify uses product tags to manage subcategories inside collections.
-See 'How do I create subcategories of products?' at 
-http://docs.shopify.com/manual/configuration/store-customization/subcategories for details.
-{% endcomment %}
-{% if collection.all_tags.size > 0 %}
-{% comment %}
-Alas, the collection title is escaped, while vendor and type aren't,
-so in comparisons we need to escape type and vendor.
-{% endcomment %}
-{% assign type_escaped = collection.products.first.type | escape %}
-{% assign vendor_escaped = collection.products.first.vendor | escape %}
-<ul class="collection-sub-categories clearfix buttons">
-  <li{% unless current_tags %} class="active"{% endunless %}>
-    {% if collection.handle %}
-    {% comment %}Good for /collections/all collection and regular collections{% endcomment %}
-    <a href="/collections/{{ collection.handle }}">All</a>
-    {% comment %}Good for automatic type collections{% endcomment %}
-    {% elsif type_escaped == collection.title %}
-    <a href="{{ collection.products.first.type | url_for_type }}">All</a>
-    {% comment %}Good for automatic vendor collections{% endcomment %}
-    {% elsif vendor_escaped == collection.title %}
-    <a href="{{ collection.products.first.vendor | url_for_vendor }}">All</a>
-    {% endif %}
-  </li> 
-  {% for tag in collection.all_tags %}
-  {% if current_tags contains tag %}
-  <li class="active">
-    {{ tag | link_to_remove_tag: tag }}
-  </li>
-  {% else %}
-  <li>
-    {{ tag | link_to_tag: tag }}
-  </li>
-  {% endif %}
-  {% endfor %}  
-</ul>
-{% endif %}
-
-{% if collection.description.size > 0 %}
-<div class="rte">
-  {{ collection.description }}
+{% paginate collection.products by 50 %}
+<div class="l-banner">
+    <h1 class="banner-heady">Shop</h1>
+    <nav class="main-subpage-nav in-banner clearfix">
+        <ul class="l-horizontal-nav clearfix">
+            <li>
+                <a href="{{ shop.url }}" class="subpage-pill active">Shop</a>
+            </li>
+            <li>
+                <a href="/cart" class="subpage-pill">Cart</a>
+            </li>
+        </ul>
+    </nav>
 </div>
-{% endif %}
-
-<ul class="grid clearfix">
+<article class="l-content-panel is-first">
+    <div class="l-content-panel-col-left">
+        <h1 class="panel-heading">
+            {{ collection.title }}
+        </h1>
+    </div>
+    <div class="l-content-panel-col-right">
+        <h1 class="section-content-heading collection-product-description">
+            Collection Description
+        </h1>
+        <section class="product-section-overview">
+            <div class="rte">
+                {{ collection.description }}
+            </div>
+        </section>
+    </div>
+    <div class="panel-down-btn">
+        
+    </div>
+    <div class="panel-up-btn">
+        
+    </div>
+</article>
 {% for product in collection.products %}
-  {% include 'product-grid-item' with 'three-per-row' %}
-{% else %}
-<li>There are no products in this view.</li>
+    <article class="l-content-panel first">
+        <div class="l-content-panel-col-left">
+            <h1 class="panel-heading panel-heading-alt">
+                {{ product.title }}
+            </h1>
+        </div>
+        <div class="l-content-panel-col-right">
+            <h1 class="section-content-heading collection-product-description">
+                Product Description
+            </h1>
+            <section class="product-section-overview">
+                <div class="rte">
+                    {{ product.description }}
+                </div>
+                <div class="collection-product-more-info clearfix">
+                    <h2 class="collection-product-price"><span>Price =</span> {{ product.price | money }}</h2>
+                    <a href="{{ product.url | within: collection }}" class="view-item-btn">View Item</a>
+                </div>
+                {% if product.images.size > 0 %}
+                    <div class="collection-featured-image">
+                        <img src="{{ product.featured_image.src | product_img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" />
+                    </div>
+                {% endif %}
+            </section>
+        </div>
+        <div class="panel-down-btn">
+            
+        </div>
+        <div class="panel-up-btn">
+            
+        </div>
+    </article>
 {% endfor %}
-</ul>
-
-{% if paginate.pages > 1 %}
-<div class="pagination">
-  {{ paginate | default_pagination }}
-</div>
-{% endif %}
-
 {% endpaginate %}

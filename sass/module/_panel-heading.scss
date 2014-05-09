@@ -1,11 +1,16 @@
 // panel headings
 
 .panel-heading {
+	position: relative;
 	margin: 0;
 	font-size: 36 / 16 * 1em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	// line-height: 1.2;
+}
+
+.section-content-heading {
+	position: relative;
 }
 
 .page-id-29 .panel-heading,
