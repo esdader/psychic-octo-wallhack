@@ -1,0 +1,99 @@
+<div class="l-banner">
+    <h1 class="banner-heady">Shop</h1>
+    <nav class="main-subpage-nav in-banner clearfix">
+        <ul class="l-horizontal-nav clearfix">
+            <li>
+                <a href="{{ shop.url }}" class="subpage-pill active">Shop</a>
+            </li>
+            <li>
+                <a href="/cart" class="subpage-pill">Cart</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<article class="l-content-panel l-product-panel-full-width is-first" itemscope itemtype="http://schema.org/Product">
+    <div class="l-content-panel-col-left l-product-images-col">
+        <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+      <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
+        {% if product.images.size > 0 %}
+            <div class="l-product-main-image-con">
+                <img src="{{ product.featured_image.src | product_img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" class="product-main-image">
+            </div>
+        {% endif %}
+        {% if product.images.size > 1 %}
+            <div class="l-product-images-thmb-con clearfix">
+                <ul class="product-images-thmb">
+                    {% for image in product.images offset: 1 %}
+                        <li{% cycle '', '', ' class="last"' %}>
+                            <a class="product-image-link" href="{{ image.src | product_img_url: 'grande' }}">
+                              <img class="product-thmb" src="{{ image.src | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+                            </a>
+                        </li>
+                    {% endfor %}
+                    <li class="last">
+                        <a class="product-image-link" href="{{ product.featured_image.src | product_img_url: 'grande' }}">
+                          <img class="product-thmb" src="{{ product.featured_image.src | product_img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+    <div class="l-content-panel-col-right l-product-details-col">
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+            <div class="product-details-title-price clearfix">
+                <h1 class="product-details-title" itemprop="name">{{ product.title }}</h1>
+                <div class="product-details-price-con" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                    {% if product.available %}
+                        <link itemprop="availability" href="http://schema.org/InStock" />
+                    {% else %}
+                        <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                    {% endif %}
+                    {% if product.compare_at_price > product.price %}
+                        <span class="product-details-price product-details-on-sale" itemprop="price">{{ product.price | money }}</span>
+                        <span class="product-details-compare-price">{{ product.compare_at_price_max | money }}</span>
+                    {% else %}
+                        <span class="product-details-price" itemprop="price">{{ product.price | money }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% assign hide_default_title = false %}
+            {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+                {% assign hide_default_title = true %}
+            {% endif %}
+            <div class="product-details-purchase{% if hide_default_title %} hidden{% endif %}">
+                <div id="product-variants">
+                     <select id="product-select" name="id">
+                        {% for variant in product.variants %}
+                            <option data-price="{{ variant.price | money }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                     </select>
+                </div>
+            </div>
+            <div class="product-details-add-to-con">
+                <div id="product-add">
+                  {% comment %}
+                    <input type="submit" name="add" id="add" class="add-to-cart" value="Add to cart">
+                  {% endcomment %}
+                  <p>This product is only available upon request. <a href="mailto:{{ shop.email }}">Contact us</a>for a quote.<p>
+                    <a href="/cart" class="view-cart-btn">View Cart</a>
+                </div>
+            </div>
+        </form>
+        <div class="product-details-desc" itemprop="description">
+            {{ product.description }}
+        </div>
+        <div class="product-details-desc">
+            <h2>Shipping Notes:</h2>
+            <p>Items in stock will ship within five business days of placing your order. For orders placed after 5pm CST, your order will be processed the following day. Estimated delivery will depend on the shipping option you select at checkout.</p>
+
+        </div>
+    </div>
+    <div class="panel-down-btn">
+        
+    </div>
+    <div class="panel-up-btn">
+        
+    </div>
+</article>
