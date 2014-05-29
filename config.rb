@@ -2,10 +2,10 @@
 # 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "primal7-7589761/assets"
+css_dir = "primal7-8198373/assets"
 sass_dir = "sass"
-images_dir = "primal7-7589761/assets"
-javascripts_dir = "primal7-7589761/assets"
+images_dir = "primal7-8198373/assets"
+javascripts_dir = "primal7-8198373/assets"
 
 output_style = :expanded
 line_comments = false
